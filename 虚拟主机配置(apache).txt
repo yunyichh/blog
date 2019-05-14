@@ -1,0 +1,16 @@
+1.打开host 添加127.0.0.1       www.xxxx.com
+2.打开vhost 
+
+<VirtualHost *:80>
+    DocumentRoot "D:\xxxxx"
+    ServerName www.xxxx.com
+    ServerAlias phpStudy.net
+  <Directory "D:\xxxxx">
+      Options FollowSymLinks ExecCGI
+      AllowOverride All
+      Order allow,deny
+      Allow from all
+      Require all granted
+  </Directory>
+</VirtualHost>
+3.重启apache
